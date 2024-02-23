@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Oasis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<img src="img/logo.png" alt="Logo">
+
+<div id="user-info"></div>
+
+<form id="loginForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="surname">Surname (if any):</label>
+    <input type="text" id="surname" name="surname">
+
+    <label for="personalId">Personal ID:
+        <span class="tooltip">
+                <span onclick="showTooltip(event)" class="tooltip-icon">&#128712;</span>
+                <span class="tooltiptext">Personal ID must consist of 8 alphanumerical characters and must be unique</span>
+            </span>
+    </label>
+    <input type="password" id="personalId" name="personalId" required>
+
+    <button type="submit">Login</button>
+    <button id="add_new" onclick="addUser()">Add new user</button>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

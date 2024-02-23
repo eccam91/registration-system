@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Oasis!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="css/welcome.css">
+</head>
+<body>
+
+<div id="header">
+    <img src="img/logo.png" alt="Logo">
+    <h1 id="welcomeMessage">Welcome back, <br> <span id="welcomeUser"></span>!</h1>
+    <button id="logoutButton" onclick="logout()">Logout</button>
+</div>
+
+<button id="deleteProfileButton" onclick="confirmDelete()">Delete Profile</button>
+<button id="updateProfileButton">Update Profile</button>
+
+<div id="updateProfileForm" style="display: none;">
+    <form id="updateForm">
+
+        <label for="updateName">Name:</label>
+        <input type="text" id="updateName">
+
+        <label for="updateSurname">Surname (in any):</label>
+        <input type="text" id="updateSurname">
+
+        <button id="submitUpdateButton" type="submit">Submit</button>
+    </form>
+</div>
+
+<div id="userListContainer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/welcome.js"></script>
+</body>
+</html>
